@@ -1,0 +1,74 @@
+.menu_bar{
+    background-color: rgb(18, 18, 80);
+    text-align: center;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.gamezop{
+    font-size: 26px;
+    color: white;
+    margin-left: 1%;
+}
+
+.menu_bar .menu_list{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 60%;
+}
+
+ .menu_list_item {
+    flex-basis: 25%;
+}
+
+.menu_bar .menu_list .menu_list_item:hover {
+    background-color: rgb(34, 50, 142);
+    cursor: pointer;
+}
+.sub_menu_1{
+    display: none;
+}
+
+.menu_bar .menu_list .menu_list_item:hover .sub_menu_1{
+    display: block;
+    position: absolute;
+}
+
+.menu_bar .menu_list .menu_list_item:hover .sub_menu_1 .menu_container{
+    display: block;
+}
+.menu_container{
+    background-color: rgb(18, 18, 80);
+}
+
+.sub_menu_1{
+    width: 14.7%;
+}
+.sum_menu_item{
+    height: 36px;
+    text-align: center;
+    word-wrap: break-word
+}
+.sum_menu_item:hover{
+    background-color: rgb(34, 50, 142);
+}
+.hamburger_icon{
+    max-height: 25px;
+}
+@media only screen and (max-width: 500px) {
+    .menu_bar .menu_list{
+        width: 70%;
+    }
+    .gamezop{
+        font-size: 20px;
+    }
+    .menu_list_item{
+        font-size: 14px;
+    }
+    .sub_menu_1{
+        width: 17%;
+    }
+}
