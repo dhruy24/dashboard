@@ -15,7 +15,6 @@ export interface Product {
   title?: string;
   id?:number;
   body?: string;
-  selected?:boolean;
 }
 
 export const navLinks : nav[] = [

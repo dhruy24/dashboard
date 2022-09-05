@@ -4,8 +4,15 @@ import style from "../../styles/usersCard.module.css";
 import { people } from "../data";
 import togglestyle from "../../styles/toggleButton.module.css";
 
-function UsersCard(props: any) {
-  let { id, name, email, topUser, setTopUser } = props;
+interface props{
+  info:people,
+  topUser:people[],
+  setTopUser:any
+}
+
+function UsersCard(props: props) {
+  let {info, topUser, setTopUser } = props;
+  let { id, name, email} = info;
   var userInfo = {
     id: id,
     name: name,
@@ -35,7 +42,7 @@ function UsersCard(props: any) {
     }
   }
 
-  function addTopUser(id: number, name: string, email: string) {
+  function addTopUser(id: any, name: any, email: any) {
     setVal(!val);
     let info: people = { id: id, name: name, email: email };
     if (!val) {

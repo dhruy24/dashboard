@@ -1,11 +1,11 @@
 import React,{useState} from "react";
-import { selected } from "../../Context/TopUserContext";
 import style from '../../styles/usersCard.module.css'
 import UsersCard from '../components/UsersCard'
+import {people} from '../data'
 
 interface usersProps {
-  usersData: any;
-  topUser:any;
+  usersData: people[];
+  topUser:people[];
   setTopUser:any;
 }
 
@@ -28,17 +28,14 @@ function UsersCardContainer({ usersData,topUser,setTopUser }: usersProps) {
         else if(val.email.toLowerCase().includes(searchTerm.toLocaleLowerCase())){
           return val
         }
-      }).map((ele:any, key:any) => {
-        let { id,name,email,state} = ele;
+      }).map((info:people, key:any) => {
+        // let { id,name,email} = ele;
         return (
           <UsersCard
             key={key}
-            id={id}
-            name={name}
-            email={email}
+            info={info}
             topUser={topUser} 
             setTopUser = {setTopUser}
-            selected={selected}
           />
         );
       })}

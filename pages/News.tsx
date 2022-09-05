@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import React from "react";
 import NewsCardContainer from "../src/Container/NewsCardContainer";
 import style from '../styles/newsPage.module.css';

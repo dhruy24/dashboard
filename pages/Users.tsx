@@ -1,7 +1,6 @@
 import React,{useContext,useState} from 'react'
 import { TopUserContext } from '../Context/TopUserContext';
 import UsersCardContainer from "../src/Container/UsersCardContainer";
-import Modal from '../src/components/Modal';
 
 function Users({usersData}:any) {
 let { topUser, setTopUser } = useContext<any>(TopUserContext)
